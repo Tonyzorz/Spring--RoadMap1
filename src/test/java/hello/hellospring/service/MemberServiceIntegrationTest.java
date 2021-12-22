@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -26,6 +27,7 @@ class MemberServiceIntegrationTest {
     MemberRepository memberRepository;
 
     @Test
+    //@Commit
     void join() {
         //given
         Member member = new Member();
